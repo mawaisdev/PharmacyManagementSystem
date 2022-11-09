@@ -16,5 +16,21 @@ namespace PharmacyManagementSystem
         {
             InitializeComponent();
         }
+
+        private void guna2TextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            txtPassword.Clear();
+            txtUsername.Clear();
+        }
     }
 }
