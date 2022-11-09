@@ -191,6 +191,7 @@
             this.btnSignin.Size = new System.Drawing.Size(146, 36);
             this.btnSignin.TabIndex = 9;
             this.btnSignin.Text = "Sign In";
+            this.btnSignin.Click += new System.EventHandler(this.btnSignin_Click);
             // 
             // btnReset
             // 

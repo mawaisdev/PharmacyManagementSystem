@@ -32,5 +32,19 @@ namespace PharmacyManagementSystem
             txtPassword.Clear();
             txtUsername.Clear();
         }
+
+        private void btnSignin_Click(object sender, EventArgs e)
+        {
+            if(txtPassword.Text == "Awais" && txtUsername.Text == "Awais")
+            {
+                Admin admin = new Admin();
+                admin.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Wrong Credentials","Invalid Data" ,MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
