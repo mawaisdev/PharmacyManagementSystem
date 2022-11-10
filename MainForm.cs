@@ -46,5 +46,10 @@ namespace PharmacyManagementSystem
                 MessageBox.Show("Wrong Credentials","Invalid Data" ,MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

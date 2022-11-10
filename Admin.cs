@@ -19,7 +19,8 @@ namespace PharmacyManagementSystem
 
         private void Admin_Load(object sender, EventArgs e)
         {
-
+            uC_Dashboard1.Visible = false;
+            btnDashboard.PerformClick();
         }
 
         private void btnLogout_Click(object sender, EventArgs e)
@@ -27,6 +28,12 @@ namespace PharmacyManagementSystem
             MainForm form = new MainForm();
             form.Show();
             this.Hide();
+        }
+
+        private void btnDashboard_Click(object sender, EventArgs e)
+        {
+            uC_Dashboard1.Visible = true;
+            uC_Dashboard1.BringToFront();
         }
     }
 }
