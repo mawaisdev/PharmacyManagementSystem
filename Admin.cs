@@ -33,7 +33,14 @@ namespace PharmacyManagementSystem
         private void btnDashboard_Click(object sender, EventArgs e)
         {
             uC_Dashboard1.Visible = true;
+            uC_AddUser1.Visible = false;
             uC_Dashboard1.BringToFront();
+        }
+
+        private void btnAddUser_Click(object sender, EventArgs e)
+        {
+            uC_AddUser1.Visible = true;
+            uC_AddUser1.BringToFront();
         }
     }
 }

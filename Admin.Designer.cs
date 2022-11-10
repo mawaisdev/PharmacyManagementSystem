@@ -42,6 +42,8 @@
             this.MainDashPanel = new System.Windows.Forms.Panel();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.uC_Dashboard1 = new PharmacyManagementSystem.AdminUC.UC_Dashboard();
+            this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.uC_AddUser1 = new PharmacyManagementSystem.AdminUC.UC_AddUser();
             this.SideMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.MainDashPanel.SuspendLayout();
@@ -158,6 +160,7 @@
             this.btnAddUser.Size = new System.Drawing.Size(237, 45);
             this.btnAddUser.TabIndex = 3;
             this.btnAddUser.Text = "Add User";
+            this.btnAddUser.Click += new System.EventHandler(this.btnAddUser_Click);
             // 
             // btnDashboard
             // 
@@ -205,6 +208,7 @@
             // MainDashPanel
             // 
             this.MainDashPanel.BackColor = System.Drawing.Color.White;
+            this.MainDashPanel.Controls.Add(this.uC_AddUser1);
             this.MainDashPanel.Controls.Add(this.uC_Dashboard1);
             this.MainDashPanel.Location = new System.Drawing.Point(272, 0);
             this.MainDashPanel.Name = "MainDashPanel";
@@ -222,6 +226,18 @@
             this.uC_Dashboard1.Name = "uC_Dashboard1";
             this.uC_Dashboard1.Size = new System.Drawing.Size(1079, 773);
             this.uC_Dashboard1.TabIndex = 0;
+            // 
+            // guna2Elipse2
+            // 
+            this.guna2Elipse2.TargetControl = this.MainDashPanel;
+            // 
+            // uC_AddUser1
+            // 
+            this.uC_AddUser1.BackColor = System.Drawing.Color.White;
+            this.uC_AddUser1.Location = new System.Drawing.Point(0, 0);
+            this.uC_AddUser1.Name = "uC_AddUser1";
+            this.uC_AddUser1.Size = new System.Drawing.Size(1091, 773);
+            this.uC_AddUser1.TabIndex = 1;
             // 
             // Admin
             // 
@@ -259,5 +275,7 @@
         private System.Windows.Forms.Label lblUsername;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private AdminUC.UC_Dashboard uC_Dashboard1;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
+        private AdminUC.UC_AddUser uC_AddUser1;
     }
 }
