@@ -46,5 +46,21 @@ namespace PharmacyManagementSystem.AdminUC
                 throw;
             }
         }
+
+        public void ClearAll()
+        {
+            txtName.Clear();
+            txtDateOfBirth.ResetText();
+            txtMobileNo.Clear();
+            txtUserRole.SelectedIndex = -1;
+            txtPassword.Clear();
+            txtUserMail.Clear();
+            txtUsername.Clear();
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            ClearAll();
+        }
     }
 }
