@@ -343,6 +343,7 @@
             this.PicUserFound.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.PicUserFound.TabIndex = 20;
             this.PicUserFound.TabStop = false;
+            this.PicUserFound.Click += new System.EventHandler(this.PicUserFound_Click);
             // 
             // label9
             // 

@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Admin));
             this.SideMenu = new System.Windows.Forms.Panel();
-            this.lblUsername = new System.Windows.Forms.Label();
+            this.UsernameLabel = new System.Windows.Forms.Label();
             this.btnLogout = new Guna.UI2.WinForms.Guna2Button();
             this.btnProfile = new Guna.UI2.WinForms.Guna2Button();
             this.btnViewUser = new Guna.UI2.WinForms.Guna2Button();
@@ -42,8 +42,10 @@
             this.MainDashPanel = new System.Windows.Forms.Panel();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.uC_AddUser1 = new PharmacyManagementSystem.AdminUC.UC_AddUser();
             this.uC_Dashboard1 = new PharmacyManagementSystem.AdminUC.UC_Dashboard();
+            this.uC_ViewUser1 = new PharmacyManagementSystem.AdminUC.UC_ViewUser();
             this.SideMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.MainDashPanel.SuspendLayout();
@@ -52,7 +54,7 @@
             // SideMenu
             // 
             this.SideMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.SideMenu.Controls.Add(this.lblUsername);
+            this.SideMenu.Controls.Add(this.UsernameLabel);
             this.SideMenu.Controls.Add(this.btnLogout);
             this.SideMenu.Controls.Add(this.btnProfile);
             this.SideMenu.Controls.Add(this.btnViewUser);
@@ -65,16 +67,17 @@
             this.SideMenu.Size = new System.Drawing.Size(275, 770);
             this.SideMenu.TabIndex = 0;
             // 
-            // lblUsername
+            // UsernameLabel
             // 
-            this.lblUsername.AutoSize = true;
-            this.lblUsername.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUsername.ForeColor = System.Drawing.Color.Yellow;
-            this.lblUsername.Location = new System.Drawing.Point(73, 662);
-            this.lblUsername.Name = "lblUsername";
-            this.lblUsername.Size = new System.Drawing.Size(113, 29);
-            this.lblUsername.TabIndex = 7;
-            this.lblUsername.Text = "Username";
+            this.UsernameLabel.Font = new System.Drawing.Font("Calibri", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UsernameLabel.ForeColor = System.Drawing.Color.Yellow;
+            this.UsernameLabel.Location = new System.Drawing.Point(0, 662);
+            this.UsernameLabel.Name = "UsernameLabel";
+            this.UsernameLabel.Size = new System.Drawing.Size(272, 29);
+            this.UsernameLabel.TabIndex = 7;
+            this.UsernameLabel.Text = "Username";
+            this.UsernameLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.UsernameLabel.Click += new System.EventHandler(this.UsernameLabel_Click);
             // 
             // btnLogout
             // 
@@ -139,6 +142,7 @@
             this.btnViewUser.Size = new System.Drawing.Size(237, 45);
             this.btnViewUser.TabIndex = 4;
             this.btnViewUser.Text = "View User";
+            this.btnViewUser.Click += new System.EventHandler(this.btnViewUser_Click);
             // 
             // btnAddUser
             // 
@@ -208,6 +212,7 @@
             // MainDashPanel
             // 
             this.MainDashPanel.BackColor = System.Drawing.Color.White;
+            this.MainDashPanel.Controls.Add(this.uC_ViewUser1);
             this.MainDashPanel.Controls.Add(this.uC_AddUser1);
             this.MainDashPanel.Controls.Add(this.uC_Dashboard1);
             this.MainDashPanel.Location = new System.Drawing.Point(272, 0);
@@ -222,6 +227,10 @@
             // guna2Elipse2
             // 
             this.guna2Elipse2.TargetControl = this.MainDashPanel;
+            // 
+            // guna2Elipse3
+            // 
+            this.guna2Elipse3.TargetControl = this.MainDashPanel;
             // 
             // uC_AddUser1
             // 
@@ -240,13 +249,21 @@
             this.uC_Dashboard1.Size = new System.Drawing.Size(1079, 773);
             this.uC_Dashboard1.TabIndex = 0;
             // 
+            // uC_ViewUser1
+            // 
+            this.uC_ViewUser1.BackColor = System.Drawing.Color.White;
+            this.uC_ViewUser1.Location = new System.Drawing.Point(0, 0);
+            this.uC_ViewUser1.Name = "uC_ViewUser1";
+            this.uC_ViewUser1.Size = new System.Drawing.Size(1091, 749);
+            this.uC_ViewUser1.TabIndex = 2;
+            // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1366, 768);
+            this.ClientSize = new System.Drawing.Size(1366, 749);
             this.Controls.Add(this.MainDashPanel);
             this.Controls.Add(this.SideMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -273,10 +290,12 @@
         private Guna.UI2.WinForms.Guna2Button btnViewUser;
         private Guna.UI2.WinForms.Guna2Button btnAddUser;
         private Guna.UI2.WinForms.Guna2Button btnDashboard;
-        private System.Windows.Forms.Label lblUsername;
+        private System.Windows.Forms.Label UsernameLabel;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
         private AdminUC.UC_Dashboard uC_Dashboard1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse2;
         private AdminUC.UC_AddUser uC_AddUser1;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse3;
+        private AdminUC.UC_ViewUser uC_ViewUser1;
     }
 }

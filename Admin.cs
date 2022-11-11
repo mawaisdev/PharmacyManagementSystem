@@ -16,6 +16,11 @@ namespace PharmacyManagementSystem
         {
             InitializeComponent();
         }
+        public Admin(string Username)
+        {
+            InitializeComponent();
+            UsernameLabel.Text = Username;
+        }
 
         private void Admin_Load(object sender, EventArgs e)
         {
@@ -34,6 +39,7 @@ namespace PharmacyManagementSystem
         {
             uC_Dashboard1.Visible = true;
             uC_AddUser1.Visible = false;
+            uC_ViewUser1.Visible = false;
             uC_Dashboard1.BringToFront();
         }
 
@@ -46,6 +52,17 @@ namespace PharmacyManagementSystem
         private void uC_AddUser1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void UsernameLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnViewUser_Click(object sender, EventArgs e)
+        {
+            uC_ViewUser1.Visible = true;
+            uC_ViewUser1.BringToFront();
         }
     }
 }

@@ -85,5 +85,10 @@ namespace PharmacyManagementSystem.AdminUC
             txtUsername.Clear();
             PicUserFound.Image = null;
         }
+
+        private void PicUserFound_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
