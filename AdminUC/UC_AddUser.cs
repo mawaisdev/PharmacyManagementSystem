@@ -60,7 +60,7 @@ namespace PharmacyManagementSystem.AdminUC
             }
             else
             {
-                var Query = $"SELECT * FROM Users WHERE Username = '{txtUsername.Text}'";
+                Query = $"SELECT * FROM Users WHERE Username = '{txtUsername.Text}'";
                 var ds = db.GetData(Query);
 
                 if (ds.Tables[0].Rows.Count != 0)

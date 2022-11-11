@@ -41,9 +41,9 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.MainDashPanel = new System.Windows.Forms.Panel();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
-            this.uC_Dashboard1 = new PharmacyManagementSystem.AdminUC.UC_Dashboard();
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.uC_AddUser1 = new PharmacyManagementSystem.AdminUC.UC_AddUser();
+            this.uC_Dashboard1 = new PharmacyManagementSystem.AdminUC.UC_Dashboard();
             this.SideMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.MainDashPanel.SuspendLayout();
@@ -219,14 +219,6 @@
             // 
             this.guna2Elipse1.TargetControl = this.MainDashPanel;
             // 
-            // uC_Dashboard1
-            // 
-            this.uC_Dashboard1.BackColor = System.Drawing.Color.White;
-            this.uC_Dashboard1.Location = new System.Drawing.Point(0, 0);
-            this.uC_Dashboard1.Name = "uC_Dashboard1";
-            this.uC_Dashboard1.Size = new System.Drawing.Size(1079, 773);
-            this.uC_Dashboard1.TabIndex = 0;
-            // 
             // guna2Elipse2
             // 
             this.guna2Elipse2.TargetControl = this.MainDashPanel;
@@ -238,6 +230,15 @@
             this.uC_AddUser1.Name = "uC_AddUser1";
             this.uC_AddUser1.Size = new System.Drawing.Size(1091, 773);
             this.uC_AddUser1.TabIndex = 1;
+            this.uC_AddUser1.Load += new System.EventHandler(this.uC_AddUser1_Load);
+            // 
+            // uC_Dashboard1
+            // 
+            this.uC_Dashboard1.BackColor = System.Drawing.Color.White;
+            this.uC_Dashboard1.Location = new System.Drawing.Point(0, 0);
+            this.uC_Dashboard1.Name = "uC_Dashboard1";
+            this.uC_Dashboard1.Size = new System.Drawing.Size(1079, 773);
+            this.uC_Dashboard1.TabIndex = 0;
             // 
             // Admin
             // 

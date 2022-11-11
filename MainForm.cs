@@ -12,21 +12,19 @@ namespace PharmacyManagementSystem
 {
     public partial class MainForm : Form
     {
+
+        ManageDatabase db = new ManageDatabase();
+        string Query = null;
+        DataSet ds;
+
         public MainForm()
         {
             InitializeComponent();
         }
-
-        private void guna2TextBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
-
         private void btnReset_Click(object sender, EventArgs e)
         {
             txtPassword.Clear();
@@ -35,18 +33,54 @@ namespace PharmacyManagementSystem
 
         private void btnSignin_Click(object sender, EventArgs e)
         {
-            if(txtPassword.Text == "Awais" && txtUsername.Text == "Awais")
+
+            Query = $"SELECT * FROM Users";
+            ds = db.GetData(Query);
+
+            if (ds.Tables[0].Rows.Count == 0)
             {
-                Admin admin = new Admin();
-                admin.Show();
-                this.Hide();
+                if (txtPassword.Text == "root" && txtUsername.Text == "root")
+                {
+                    Admin admin = new Admin();
+                    admin.Show();
+                    this.Hide();
+                }
             }
             else
             {
-                MessageBox.Show("Wrong Credentials","Invalid Data" ,MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Query = $"SELECT * FROM Users WHERE Username = '{txtUsername.Text}' AND Pass = '{txtPassword.Text}' ";
+                ds= db.GetData(Query);
+                if (ds.Tables[0].Rows.Count != 0)
+                {
+                    string Role = ds.Tables[0].Rows[0][1].ToString();
+                    if(Role == "Admin")
+                    {
+                        Admin admin = new Admin();
+                        admin.Show();
+                        this.Hide();
+                    }
+                    else if (Role == "Pharmacist")
+                    {
+                        Pharmacist pharmacist = new Pharmacist();
+                        pharmacist.Show();
+                        this.Hide();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Wrong Credentials", "Invalid Data", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
+            
         }
 
+
+
+
+        private void guna2TextBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
         private void MainForm_Load(object sender, EventArgs e)
         {
 

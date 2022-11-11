@@ -33,21 +33,21 @@
             this.label1 = new System.Windows.Forms.Label();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label5 = new System.Windows.Forms.Label();
+            this.AdminLabel = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.PharmacistLabel = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label13 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.CustomerLabel = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.btnSync = new Guna.UI2.WinForms.Guna2Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -72,7 +72,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Bisque;
-            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.AdminLabel);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
@@ -81,17 +81,17 @@
             this.panel1.Size = new System.Drawing.Size(290, 600);
             this.panel1.TabIndex = 1;
             // 
-            // label5
+            // AdminLabel
             // 
-            this.label5.AutoSize = true;
-            this.label5.BackColor = System.Drawing.Color.White;
-            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(114, 522);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(49, 35);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "22";
+            this.AdminLabel.AutoSize = true;
+            this.AdminLabel.BackColor = System.Drawing.Color.White;
+            this.AdminLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.AdminLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AdminLabel.Location = new System.Drawing.Point(114, 522);
+            this.AdminLabel.Name = "AdminLabel";
+            this.AdminLabel.Size = new System.Drawing.Size(49, 35);
+            this.AdminLabel.TabIndex = 3;
+            this.AdminLabel.Text = "22";
             // 
             // label4
             // 
@@ -128,7 +128,7 @@
             this.panel2.BackColor = System.Drawing.Color.Bisque;
             this.panel2.Controls.Add(this.label12);
             this.panel2.Controls.Add(this.label10);
-            this.panel2.Controls.Add(this.label6);
+            this.panel2.Controls.Add(this.PharmacistLabel);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Location = new System.Drawing.Point(402, 90);
             this.panel2.Name = "panel2";
@@ -155,17 +155,17 @@
             this.label10.TabIndex = 4;
             this.label10.Text = "Pharmacist";
             // 
-            // label6
+            // PharmacistLabel
             // 
-            this.label6.AutoSize = true;
-            this.label6.BackColor = System.Drawing.Color.White;
-            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(121, 522);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(49, 35);
-            this.label6.TabIndex = 5;
-            this.label6.Text = "22";
+            this.PharmacistLabel.AutoSize = true;
+            this.PharmacistLabel.BackColor = System.Drawing.Color.White;
+            this.PharmacistLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.PharmacistLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PharmacistLabel.Location = new System.Drawing.Point(121, 522);
+            this.PharmacistLabel.Name = "PharmacistLabel";
+            this.PharmacistLabel.Size = new System.Drawing.Size(49, 35);
+            this.PharmacistLabel.TabIndex = 5;
+            this.PharmacistLabel.Text = "22";
             // 
             // label7
             // 
@@ -182,7 +182,7 @@
             this.panel3.BackColor = System.Drawing.Color.Bisque;
             this.panel3.Controls.Add(this.label13);
             this.panel3.Controls.Add(this.label11);
-            this.panel3.Controls.Add(this.label8);
+            this.panel3.Controls.Add(this.CustomerLabel);
             this.panel3.Controls.Add(this.label9);
             this.panel3.Location = new System.Drawing.Point(778, 90);
             this.panel3.Name = "panel3";
@@ -209,17 +209,17 @@
             this.label11.TabIndex = 6;
             this.label11.Text = "Customer";
             // 
-            // label8
+            // CustomerLabel
             // 
-            this.label8.AutoSize = true;
-            this.label8.BackColor = System.Drawing.Color.White;
-            this.label8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(128, 522);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(49, 35);
-            this.label8.TabIndex = 7;
-            this.label8.Text = "22";
+            this.CustomerLabel.AutoSize = true;
+            this.CustomerLabel.BackColor = System.Drawing.Color.White;
+            this.CustomerLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.CustomerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CustomerLabel.Location = new System.Drawing.Point(128, 522);
+            this.CustomerLabel.Name = "CustomerLabel";
+            this.CustomerLabel.Size = new System.Drawing.Size(49, 35);
+            this.CustomerLabel.TabIndex = 7;
+            this.CustomerLabel.Text = "22";
             // 
             // label9
             // 
@@ -231,24 +231,25 @@
             this.label9.TabIndex = 6;
             this.label9.Text = "Total Cusdtomers";
             // 
-            // guna2Button1
+            // btnSync
             // 
-            this.guna2Button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2Button1.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.guna2Button1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.guna2Button1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.guna2Button1.FillColor = System.Drawing.Color.White;
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.HoverState.FillColor = System.Drawing.Color.White;
-            this.guna2Button1.Image = ((System.Drawing.Image)(resources.GetObject("guna2Button1.Image")));
-            this.guna2Button1.ImageSize = new System.Drawing.Size(35, 35);
-            this.guna2Button1.Location = new System.Drawing.Point(212, 31);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.PressedColor = System.Drawing.Color.White;
-            this.guna2Button1.Size = new System.Drawing.Size(34, 35);
-            this.guna2Button1.TabIndex = 4;
+            this.btnSync.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnSync.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnSync.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnSync.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnSync.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnSync.FillColor = System.Drawing.Color.White;
+            this.btnSync.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnSync.ForeColor = System.Drawing.Color.White;
+            this.btnSync.HoverState.FillColor = System.Drawing.Color.White;
+            this.btnSync.Image = ((System.Drawing.Image)(resources.GetObject("btnSync.Image")));
+            this.btnSync.ImageSize = new System.Drawing.Size(35, 35);
+            this.btnSync.Location = new System.Drawing.Point(212, 31);
+            this.btnSync.Name = "btnSync";
+            this.btnSync.PressedColor = System.Drawing.Color.White;
+            this.btnSync.Size = new System.Drawing.Size(34, 35);
+            this.btnSync.TabIndex = 4;
+            this.btnSync.Click += new System.EventHandler(this.btnSync_Click);
             // 
             // pictureBox1
             // 
@@ -266,7 +267,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.guna2Button1);
+            this.Controls.Add(this.btnSync);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
@@ -295,18 +296,18 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label AdminLabel;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label CustomerLabel;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label PharmacistLabel;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button btnSync;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
