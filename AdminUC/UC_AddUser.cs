@@ -47,6 +47,33 @@ namespace PharmacyManagementSystem.AdminUC
             }
         }
 
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            ClearAll();
+        }
+
+        private void txtUsername_TextChanged(object sender, EventArgs e)
+        {
+            if(txtUsername.Text.Length == 0) 
+            {
+                PicUserFound.Image = null;
+            }
+            else
+            {
+                var Query = $"SELECT * FROM Users WHERE Username = '{txtUsername.Text}'";
+                var ds = db.GetData(Query);
+
+                if (ds.Tables[0].Rows.Count != 0)
+                {
+                    PicUserFound.ImageLocation = @"C:\Users\Awais\Downloads\C# Pharmacy Management System\Pharmacy Management System in C#\no.png";
+                }
+                else
+                {
+                    PicUserFound.ImageLocation = @"C:\Users\Awais\Downloads\C# Pharmacy Management System\Pharmacy Management System in C#\yes.png";
+                }
+            }
+        }
+
         public void ClearAll()
         {
             txtName.Clear();
@@ -56,11 +83,7 @@ namespace PharmacyManagementSystem.AdminUC
             txtPassword.Clear();
             txtUserMail.Clear();
             txtUsername.Clear();
-        }
-
-        private void btnReset_Click(object sender, EventArgs e)
-        {
-            ClearAll();
+            PicUserFound.Image = null;
         }
     }
 }

@@ -49,6 +49,9 @@
             this.btnSignup = new Guna.UI2.WinForms.Guna2Button();
             this.btnReset = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.PicUserFound = new System.Windows.Forms.PictureBox();
+            this.label9 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.PicUserFound)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -105,7 +108,7 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(677, 160);
+            this.label6.Location = new System.Drawing.Point(614, 160);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(48, 20);
             this.label6.TabIndex = 6;
@@ -115,7 +118,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(677, 300);
+            this.label7.Location = new System.Drawing.Point(614, 300);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(83, 20);
             this.label7.TabIndex = 7;
@@ -125,7 +128,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(677, 415);
+            this.label8.Location = new System.Drawing.Point(614, 415);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(78, 20);
             this.label8.TabIndex = 8;
@@ -203,7 +206,7 @@
             this.txtUserMail.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtUserMail.ForeColor = System.Drawing.Color.Black;
             this.txtUserMail.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUserMail.Location = new System.Drawing.Point(722, 222);
+            this.txtUserMail.Location = new System.Drawing.Point(659, 222);
             this.txtUserMail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtUserMail.Name = "txtUserMail";
             this.txtUserMail.PasswordChar = '\0';
@@ -225,7 +228,7 @@
             this.txtUsername.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtUsername.ForeColor = System.Drawing.Color.Black;
             this.txtUsername.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtUsername.Location = new System.Drawing.Point(722, 343);
+            this.txtUsername.Location = new System.Drawing.Point(659, 343);
             this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.PasswordChar = '\0';
@@ -233,6 +236,7 @@
             this.txtUsername.SelectedText = "";
             this.txtUsername.Size = new System.Drawing.Size(340, 36);
             this.txtUsername.TabIndex = 14;
+            this.txtUsername.TextChanged += new System.EventHandler(this.txtUsername_TextChanged);
             // 
             // txtPassword
             // 
@@ -246,7 +250,7 @@
             this.txtPassword.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.txtPassword.ForeColor = System.Drawing.Color.Black;
             this.txtPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.txtPassword.Location = new System.Drawing.Point(722, 461);
+            this.txtPassword.Location = new System.Drawing.Point(659, 461);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '\0';
@@ -294,7 +298,7 @@
             this.btnSignup.Image = ((System.Drawing.Image)(resources.GetObject("btnSignup.Image")));
             this.btnSignup.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnSignup.ImageSize = new System.Drawing.Size(32, 32);
-            this.btnSignup.Location = new System.Drawing.Point(681, 576);
+            this.btnSignup.Location = new System.Drawing.Point(618, 576);
             this.btnSignup.Name = "btnSignup";
             this.btnSignup.Size = new System.Drawing.Size(180, 45);
             this.btnSignup.TabIndex = 18;
@@ -319,7 +323,7 @@
             this.btnReset.Image = ((System.Drawing.Image)(resources.GetObject("btnReset.Image")));
             this.btnReset.ImageAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.btnReset.ImageSize = new System.Drawing.Size(35, 35);
-            this.btnReset.Location = new System.Drawing.Point(882, 576);
+            this.btnReset.Location = new System.Drawing.Point(819, 576);
             this.btnReset.Name = "btnReset";
             this.btnReset.Size = new System.Drawing.Size(180, 45);
             this.btnReset.TabIndex = 19;
@@ -330,11 +334,34 @@
             // 
             this.guna2Elipse1.TargetControl = this;
             // 
+            // PicUserFound
+            // 
+            this.PicUserFound.BackColor = System.Drawing.Color.White;
+            this.PicUserFound.Location = new System.Drawing.Point(1006, 343);
+            this.PicUserFound.Name = "PicUserFound";
+            this.PicUserFound.Size = new System.Drawing.Size(49, 36);
+            this.PicUserFound.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.PicUserFound.TabIndex = 20;
+            this.PicUserFound.TabStop = false;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.label9.ForeColor = System.Drawing.Color.Red;
+            this.label9.Location = new System.Drawing.Point(656, 647);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(252, 17);
+            this.label9.TabIndex = 21;
+            this.label9.Text = "*Check UserRole Once before Sign Up";
+            // 
             // UC_AddUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.PicUserFound);
             this.Controls.Add(this.btnReset);
             this.Controls.Add(this.btnSignup);
             this.Controls.Add(this.panel1);
@@ -355,6 +382,7 @@
             this.Controls.Add(this.label1);
             this.Name = "UC_AddUser";
             this.Size = new System.Drawing.Size(1079, 773);
+            ((System.ComponentModel.ISupportInitialize)(this.PicUserFound)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -381,5 +409,7 @@
         private Guna.UI2.WinForms.Guna2Button btnSignup;
         private Guna.UI2.WinForms.Guna2Button btnReset;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse1;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.PictureBox PicUserFound;
     }
 }
