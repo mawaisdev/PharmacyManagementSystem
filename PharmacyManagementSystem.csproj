@@ -38,6 +38,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -92,6 +93,42 @@
     <Compile Include="Pharmacist.Designer.cs">
       <DependentUpon>Pharmacist.cs</DependentUpon>
     </Compile>
+    <Compile Include="PharmacistUC\UC_P_AddMedicine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PharmacistUC\UC_P_AddMedicine.Designer.cs">
+      <DependentUpon>UC_P_AddMedicine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PharmacistUC\UC_P_Dashboard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PharmacistUC\UC_P_Dashboard.Designer.cs">
+      <DependentUpon>UC_P_Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PharmacistUC\UC_P_ModifyMedicine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PharmacistUC\UC_P_ModifyMedicine.Designer.cs">
+      <DependentUpon>UC_P_ModifyMedicine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PharmacistUC\UC_P_SellMedicine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PharmacistUC\UC_P_SellMedicine.Designer.cs">
+      <DependentUpon>UC_P_SellMedicine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PharmacistUC\UC_P_Validity.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PharmacistUC\UC_P_Validity.Designer.cs">
+      <DependentUpon>UC_P_Validity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PharmacistUC\UC_P_ViewMedicine.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PharmacistUC\UC_P_ViewMedicine.Designer.cs">
+      <DependentUpon>UC_P_ViewMedicine.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Admin.resx">
@@ -114,6 +151,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Pharmacist.resx">
       <DependentUpon>Pharmacist.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PharmacistUC\UC_P_AddMedicine.resx">
+      <DependentUpon>UC_P_AddMedicine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PharmacistUC\UC_P_Dashboard.resx">
+      <DependentUpon>UC_P_Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PharmacistUC\UC_P_ModifyMedicine.resx">
+      <DependentUpon>UC_P_ModifyMedicine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PharmacistUC\UC_P_SellMedicine.resx">
+      <DependentUpon>UC_P_SellMedicine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PharmacistUC\UC_P_Validity.resx">
+      <DependentUpon>UC_P_Validity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PharmacistUC\UC_P_ViewMedicine.resx">
+      <DependentUpon>UC_P_ViewMedicine.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
