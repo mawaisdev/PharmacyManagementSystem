@@ -16,5 +16,12 @@ namespace PharmacyManagementSystem
         {
             InitializeComponent();
         }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+            MainForm form = new MainForm();
+            form.Show();
+            this.Hide();
+        }
     }
 }
