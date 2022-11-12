@@ -12,14 +12,21 @@ namespace PharmacyManagementSystem
 {
     public partial class Admin : Form
     {
+        string User = "";
         public Admin()
         {
             InitializeComponent();
+        }
+        public string Id
+        {
+            get { return User.ToString(); }
         }
         public Admin(string Username)
         {
             InitializeComponent();
             UsernameLabel.Text = Username;
+            User = Username;
+            uC_ViewUser1.Id = Id;
         }
 
         private void Admin_Load(object sender, EventArgs e)
@@ -41,6 +48,7 @@ namespace PharmacyManagementSystem
             uC_AddUser1.Visible = false;
             uC_ViewUser1.Visible = false;
             uC_Dashboard1.BringToFront();
+            uC_Dashboard1.RefreshData();
         }
 
         private void btnAddUser_Click(object sender, EventArgs e)
@@ -63,6 +71,7 @@ namespace PharmacyManagementSystem
         {
             uC_ViewUser1.Visible = true;
             uC_ViewUser1.BringToFront();
+            uC_ViewUser1.RefershData();
         }
     }
 }

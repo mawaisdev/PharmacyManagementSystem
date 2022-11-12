@@ -57,5 +57,9 @@ namespace PharmacyManagementSystem.AdminUC
         {
             UC_Dashboard_Load(this, null);
         }
+        public void RefreshData()
+        {
+            UC_Dashboard_Load(this, null);
+        }
     }
 }
