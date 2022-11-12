@@ -43,9 +43,11 @@
             this.guna2Elipse1 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse2 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
             this.guna2Elipse3 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.guna2Elipse4 = new Guna.UI2.WinForms.Guna2Elipse(this.components);
+            this.uC_Profile1 = new PharmacyManagementSystem.AdminUC.UC_Profile();
+            this.uC_ViewUser1 = new PharmacyManagementSystem.AdminUC.UC_ViewUser();
             this.uC_AddUser1 = new PharmacyManagementSystem.AdminUC.UC_AddUser();
             this.uC_Dashboard1 = new PharmacyManagementSystem.AdminUC.UC_Dashboard();
-            this.uC_ViewUser1 = new PharmacyManagementSystem.AdminUC.UC_ViewUser();
             this.SideMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.MainDashPanel.SuspendLayout();
@@ -121,6 +123,7 @@
             this.btnProfile.Size = new System.Drawing.Size(237, 45);
             this.btnProfile.TabIndex = 5;
             this.btnProfile.Text = "Profile";
+            this.btnProfile.Click += new System.EventHandler(this.btnProfile_Click);
             // 
             // btnViewUser
             // 
@@ -212,6 +215,7 @@
             // MainDashPanel
             // 
             this.MainDashPanel.BackColor = System.Drawing.Color.White;
+            this.MainDashPanel.Controls.Add(this.uC_Profile1);
             this.MainDashPanel.Controls.Add(this.uC_ViewUser1);
             this.MainDashPanel.Controls.Add(this.uC_AddUser1);
             this.MainDashPanel.Controls.Add(this.uC_Dashboard1);
@@ -232,6 +236,26 @@
             // 
             this.guna2Elipse3.TargetControl = this.MainDashPanel;
             // 
+            // guna2Elipse4
+            // 
+            this.guna2Elipse4.TargetControl = this.MainDashPanel;
+            // 
+            // uC_Profile1
+            // 
+            this.uC_Profile1.BackColor = System.Drawing.Color.White;
+            this.uC_Profile1.Location = new System.Drawing.Point(0, 0);
+            this.uC_Profile1.Name = "uC_Profile1";
+            this.uC_Profile1.Size = new System.Drawing.Size(1091, 773);
+            this.uC_Profile1.TabIndex = 3;
+            // 
+            // uC_ViewUser1
+            // 
+            this.uC_ViewUser1.BackColor = System.Drawing.Color.White;
+            this.uC_ViewUser1.Location = new System.Drawing.Point(0, 0);
+            this.uC_ViewUser1.Name = "uC_ViewUser1";
+            this.uC_ViewUser1.Size = new System.Drawing.Size(1091, 749);
+            this.uC_ViewUser1.TabIndex = 2;
+            // 
             // uC_AddUser1
             // 
             this.uC_AddUser1.BackColor = System.Drawing.Color.White;
@@ -249,21 +273,13 @@
             this.uC_Dashboard1.Size = new System.Drawing.Size(1079, 773);
             this.uC_Dashboard1.TabIndex = 0;
             // 
-            // uC_ViewUser1
-            // 
-            this.uC_ViewUser1.BackColor = System.Drawing.Color.White;
-            this.uC_ViewUser1.Location = new System.Drawing.Point(0, 0);
-            this.uC_ViewUser1.Name = "uC_ViewUser1";
-            this.uC_ViewUser1.Size = new System.Drawing.Size(1091, 749);
-            this.uC_ViewUser1.TabIndex = 2;
-            // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1366, 749);
+            this.ClientSize = new System.Drawing.Size(1366, 768);
             this.Controls.Add(this.MainDashPanel);
             this.Controls.Add(this.SideMenu);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -297,5 +313,7 @@
         private AdminUC.UC_AddUser uC_AddUser1;
         private Guna.UI2.WinForms.Guna2Elipse guna2Elipse3;
         private AdminUC.UC_ViewUser uC_ViewUser1;
+        private Guna.UI2.WinForms.Guna2Elipse guna2Elipse4;
+        private AdminUC.UC_Profile uC_Profile1;
     }
 }

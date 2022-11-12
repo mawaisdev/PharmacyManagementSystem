@@ -67,6 +67,12 @@
     <Compile Include="AdminUC\UC_Dashboard.Designer.cs">
       <DependentUpon>UC_Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="AdminUC\UC_Profile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="AdminUC\UC_Profile.Designer.cs">
+      <DependentUpon>UC_Profile.cs</DependentUpon>
+    </Compile>
     <Compile Include="AdminUC\UC_ViewUser.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -96,6 +102,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AdminUC\UC_Dashboard.resx">
       <DependentUpon>UC_Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AdminUC\UC_Profile.resx">
+      <DependentUpon>UC_Profile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AdminUC\UC_ViewUser.resx">
       <DependentUpon>UC_ViewUser.cs</DependentUpon>

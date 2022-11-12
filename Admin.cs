@@ -27,11 +27,12 @@ namespace PharmacyManagementSystem
             UsernameLabel.Text = Username;
             User = Username;
             uC_ViewUser1.Id = Id;
+            uC_Profile1.Username = Id;
         }
 
         private void Admin_Load(object sender, EventArgs e)
         {
-            uC_Dashboard1.Visible = false;
+            DisableAll();
             btnDashboard.PerformClick();
         }
 
@@ -45,8 +46,6 @@ namespace PharmacyManagementSystem
         private void btnDashboard_Click(object sender, EventArgs e)
         {
             uC_Dashboard1.Visible = true;
-            uC_AddUser1.Visible = false;
-            uC_ViewUser1.Visible = false;
             uC_Dashboard1.BringToFront();
             uC_Dashboard1.RefreshData();
         }
@@ -72,6 +71,20 @@ namespace PharmacyManagementSystem
             uC_ViewUser1.Visible = true;
             uC_ViewUser1.BringToFront();
             uC_ViewUser1.RefershData();
+        }
+
+        private void btnProfile_Click(object sender, EventArgs e)
+        {
+            uC_Profile1.Visible = true;
+            uC_Profile1.BringToFront();
+            uC_Profile1.FillData();
+        }
+        private void DisableAll()
+        {
+            uC_Dashboard1.Visible = false;
+            uC_Profile1.Visible = false;
+            uC_ViewUser1.Visible = false;
+            uC_AddUser1.Visible = false;
         }
     }
 }
